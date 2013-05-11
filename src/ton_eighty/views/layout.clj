@@ -2,6 +2,23 @@
   (:use [hiccup.core :only (html)]
         [hiccup.page :only (html5 include-css)]))
 
+(defn navbar []
+  (html5
+   [:div {:class "navbar-wrapper"}
+    [:div {:class "container"}
+     [:div {:class "navbar navbar-inverse"}
+      [:div {:class "navbar-inner"}
+       [:button {:type "button" :class "btn btn-navbar" :data-toggle "collapse" :data-target ".nav-collapse"}
+        [:span {:class "icon-bar"}]
+        [:span {:class "icon-bar"}]
+        [:span {:class "icon-bar"}]]
+       [:a {:class "brand" :href "#"} "Ton Eighty"]
+       [:div {:class "nav-collapse collapse"}
+        [:ul {:class "nav"}
+         [:li {:class "active"} [:a {:href "#"} "Home"]]
+         [:li [:a {:href "#"} "About"]]
+         [:li [:a {:href "#"} "Contact"]]]]]]]]))
+
 (defn common [title & body]
   (html5
    [:head
@@ -9,10 +26,11 @@
     [:meta {:http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1"}]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
     [:title title]
-    (include-css "/stylesheets/base.css")]
+    (include-css "/bootstrap/css/bootstrap.css")
+    (include-css "/stylesheets/base.css")
+    (include-css "/bootstrap/css/bootstrap-responsive.css")]
    [:body
-    [:div {:id "header"}
-     [:h1 {:class "container"} "TON EIGHTY"]]
+    (navbar)
     [:div {:id "content" class "container"} body]]))
 
 (defn four-oh-four []

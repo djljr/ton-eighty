@@ -17,3 +17,8 @@
 
 (index)
 
+(require '[ton-eighty.views.layout :as l])
+
+(l/navbar)
+
+(l/common "test")
