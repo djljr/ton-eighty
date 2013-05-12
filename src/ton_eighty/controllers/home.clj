@@ -7,5 +7,9 @@
 (defn index []
   (view/index))
 
+(defn game []
+  (view/game))
+
 (defroutes routes
-  (GET "/" [] (index)))
+  (GET "/" [] (index))
+  (GET "/game" [] (game)))

@@ -2,6 +2,8 @@
 ;; immediately with the results shown on the
 ;; right.
 
+(use 'clojure.repl)
+
 (require '[hiccup.core :as h])
 
 (h/html [:h1 "Hello World"])
@@ -22,3 +24,8 @@
 (l/navbar)
 
 (l/common "test")
+
+(require '[ton-eighty.views.home :as home])
+(require '[ton-eighty.controllers.home :as home-controller])
+
+

@@ -4,3 +4,6 @@
 
 (defn index []
   (layout/common "TON EIGHTY" [:div {:class "header"} "Ton Eighty"]))
+
+(defn game []
+  (layout/common "TON EIGHTY" [:div {:class "header"} "Game"]))
