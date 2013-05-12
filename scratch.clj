@@ -28,4 +28,4 @@
 (require '[ton-eighty.views.home :as home])
 (require '[ton-eighty.controllers.home :as home-controller])
 
-
+(home/game-form)
