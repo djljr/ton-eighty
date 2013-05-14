@@ -9,4 +9,5 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.3"]]
   :plugins [[lein-ring "0.8.5"]]
+  :ring {:handler ton-eighty.core/routes}
   :main ton-eighty.core)

@@ -12,4 +12,4 @@
 
 (defroutes routes
   (GET "/" [] (index))
-  (GET "/game" [] (game)))
+  (GET "/games" [] (game)))
