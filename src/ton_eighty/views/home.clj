@@ -1,11 +1,12 @@
 (ns ton-eighty.views.home
-  (:use [hiccup.core :only (h)]
+  (:use
+        [hiccup.core :only (h)]
         [hiccup.form :only (form-to label text-field select-options)]
         [clojure.string :only (lower-case)])
   (:require [ton-eighty.views.layout :as layout]))
 
-(defn index []
-  (layout/common "TON EIGHTY" [:div {:class "header"} "Ton Eighty"]))
+(defn index [req]
+  (layout/common req "TON EIGHTY" [:div {:class "header"} "Ton Eighty"]))
 
 (defn- game-select [game-name]
   "individual game select button in bootstrap style"
@@ -51,6 +52,6 @@
              (score-input "Player 3" "p3")
              (submit-button "Record"))])
 
-(defn game []
-  (layout/common "TON EIGHTY" [:div {:class "header"} (game-form)]))
+(defn game [req]
+  (layout/common req "TON EIGHTY" [:div {:class "header"} (game-form)]))
 

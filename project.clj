@@ -5,9 +5,10 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/java.jdbc "0.3.0-alpha3"]
                  [postgresql "9.1-901.jdbc4"]
-                 [ring/ring-jetty-adapter "1.1.8"]
+                 [ring/ring-jetty-adapter "1.2.0-RC1"]
                  [compojure "1.1.5"]
-                 [hiccup "1.0.3"]]
+                 [hiccup "1.0.3"]
+                 [com.cemerick/friend "0.1.5"]]
   :plugins [[lein-ring "0.8.5"]]
   :ring {:handler ton-eighty.core/routes}
   :main ton-eighty.core)
