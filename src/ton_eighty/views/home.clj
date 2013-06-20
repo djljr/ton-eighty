@@ -13,7 +13,7 @@
     [:button {:type "button" :class "btn btn-primary"} game-name]))
 
 (defn games [games]
-  "create the radio button group in bootstrap style"
+  "create the game select radio button group in bootstrap style"
   [:div {:class "control-group" :data-toggle "buttons-radio"}
    [:label {:class "control-label"} "Type"]
    [:div {:class "controls btn-group"} (map game-select games)]])

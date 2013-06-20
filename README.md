@@ -30,7 +30,7 @@ Lots of the stack used was taken from [this heroku article][1]
 
 ## Development
 
-I'm trying to use [LightTable][2] (version 0.4.4) as the primary development platform. If you open up the directory in the workspace,
+I'm trying to use [LightTable][2] (version 0.4.11) as the primary development platform. If you open up the directory in the workspace,
 you can eval a line from the core.clj file to connect to the project. Once you do that you can start a repl (`ctrl-space` then `Instarepl`).
 
 Now you can use in-line evaluation of commands each line will eval as you type, for instance:
