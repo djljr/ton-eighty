@@ -4,12 +4,12 @@
             [ring.util.response :as ring]
             [ton-eighty.views.home :as view]))
 
-(defn index []
-  (view/index))
+(defn index [req]
+  (view/index req))
 
-(defn game []
-  (view/game))
+(defn game [req]
+  (view/game req))
 
 (defroutes routes
-  (GET "/" [] (index))
-  (GET "/game" [] (game)))
+  (GET "/" req (index req))
+  (GET "/game" req (game req)))
