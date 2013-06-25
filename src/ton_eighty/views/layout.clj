@@ -5,26 +5,25 @@
         [hiccup.page :only (html5 include-css include-js)]))
 
 (defn navbar [req]
-  (html5
-   [:div {:class "navbar-wrapper"}
-    [:div {:class "container"}
-     [:div {:class "navbar navbar-inverse navbar-fixed-top"}
-      [:div {:class "navbar-inner"}
-       [:button {:type "button" :class "btn btn-navbar" :data-toggle "collapse" :data-target ".nav-collapse"}
-        [:span {:class "icon-bar"}]
-        [:span {:class "icon-bar"}]
-        [:span {:class "icon-bar"}]]
-       [:a {:class "brand" :href "#"} "Ton Eighty"]
-       [:div {:class "nav-collapse collapse"}
-        [:ul {:class "nav"}
-         [:li {:class "active"} [:a {:href "#"} "Home"]]
-         [:li [:a {:href "#"} "About"]]
-         [:li [:a {:href "#"} "Contact"]]]
-        (if-let [auth (friend/current-authentication req)]
+  [:div {:class "navbar-wrapper"}
+   [:div {:class "container"}
+    [:div {:class "navbar navbar-inverse navbar-fixed-top"}
+     [:div {:class "navbar-inner"}
+      [:button {:type "button" :class "btn btn-navbar" :data-toggle "collapse" :data-target ".nav-collapse"}
+       [:span {:class "icon-bar"}]
+       [:span {:class "icon-bar"}]
+       [:span {:class "icon-bar"}]]
+      [:a {:class "brand" :href "#"} "Ton Eighty"]
+      [:div {:class "nav-collapse collapse"}
+       [:ul {:class "nav"}
+        [:li {:class "active"} [:a {:href "#"} "Home"]]
+        [:li [:a {:href "#"} "About"]]
+        [:li [:a {:href "#"} "Contact"]]]
+       (if-let [auth (friend/current-authentication req)]
          [:ul {:class "nav pull-right"}
           [:li {:class "pull-right"} [:a {:href (str "/login?identifier=" "https://www.google.com/accounts/o8/id")} "Login"]]]
          [:ul {:class "nav pull-right"}
-          [:li {:class "pull-right"} [:a {:href (str "/login?identifier=" "https://www.google.com/accounts/o8/id")} "Login"]]])]]]]]))
+          [:li {:class "pull-right"} [:a {:href (str "/login?identifier=" "https://www.google.com/accounts/o8/id")} "Login"]]])]]]]])
 
 (defn common [req title & body]
   (html5
