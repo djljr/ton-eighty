@@ -9,6 +9,14 @@
                  [compojure "1.1.5"]
                  [hiccup "1.0.3"]
                  [com.cemerick/friend "0.1.5"]]
-  :plugins [[lein-ring "0.8.5"]]
+  :plugins [[lein-ring "0.8.5"]
+            [lein-cljsbuild "0.3.2"]]
   :ring {:handler ton-eighty.core/routes}
+  :cljsbuild {
+              :builds [{
+                        :source-paths ["src/cljs"]
+                        :compiler {
+                                   :output-to "resources/js/main.js"
+                                   :optimizations :whitespace
+                                   :pretty-print true}}]}
   :main ton-eighty.core)

@@ -2,6 +2,7 @@
 ;; immediately with the results shown on the
 ;; right.
 
+
 (use 'clojure.repl)
 
 (require '[hiccup.core :as h])
@@ -21,11 +22,11 @@
 
 (require '[ton-eighty.views.layout :as l])
 
-(l/navbar)
-
-(l/common "test")
-
 (require '[ton-eighty.views.home :as home])
+(require '[ton-eighty.views.game :as game])
+(require '[ton-eighty.views.practice :as practice])
 (require '[ton-eighty.controllers.home :as home-controller])
 
-(home/game-form)
+(game/game-form)
+
+(practice/one-two-or-three)
