@@ -8,7 +8,7 @@
                  [ring/ring-jetty-adapter "1.2.0-RC1"]
                  [compojure "1.1.5"]
                  [hiccup "1.0.3"]
-                 [com.cemerick/friend "0.1.5"]]
+                 [prismatic/dommy "0.1.1"]]
   :plugins [[lein-ring "0.8.5"]
             [lein-cljsbuild "0.3.2"]]
   :ring {:handler ton-eighty.core/routes}
@@ -16,7 +16,7 @@
               :builds [{
                         :source-paths ["src/cljs"]
                         :compiler {
-                                   :output-to "resources/js/main.js"
+                                   :output-to "resources/public/js/main.js"
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :main ton-eighty.core)

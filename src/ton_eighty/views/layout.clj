@@ -1,7 +1,5 @@
 (ns ton-eighty.views.layout
-  (:use [cemerick.friend :as friend]
-        [cemerick.friend.openid :as openid]
-        [hiccup.core :only (html)]
+  (:use [hiccup.core :only (html)]
         [hiccup.page :only (html5 include-css include-js)]))
 
 (defn navbar [req]
@@ -17,13 +15,7 @@
       [:div {:class "nav-collapse collapse"}
        [:ul {:class "nav"}
         [:li {:class "active"} [:a {:href "#"} "Home"]]
-        [:li [:a {:href "#"} "About"]]
-        [:li [:a {:href "#"} "Contact"]]]
-       (if-let [auth (friend/current-authentication req)]
-         [:ul {:class "nav pull-right"}
-          [:li {:class "pull-right"} [:a {:href (str "/login?identifier=" "https://www.google.com/accounts/o8/id")} "Login"]]]
-         [:ul {:class "nav pull-right"}
-          [:li {:class "pull-right"} [:a {:href (str "/login?identifier=" "https://www.google.com/accounts/o8/id")} "Login"]]])]]]]])
+        [:li [:a {:href "/practice"} "Practice"]]]]]]]])
 
 (defn common [req title & body]
   (html5
@@ -39,7 +31,8 @@
     (navbar req)
     [:div {:id "content" :class "container"} body]
     (include-js "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-    (include-js "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js")]))
+    (include-js "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js")
+    (include-js "/js/main.js")]))
 
 (defn four-oh-four []
   (common nil "Page Not Found"

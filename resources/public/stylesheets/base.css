@@ -2,3 +2,148 @@
 
 body { padding-top: 60px; }
 
+div.board button {
+  width:100%;
+}
+
+div.board {
+  position: relative;
+}
+
+div.board div.section-20 {
+  position:absolute;
+}
+
+div.board div.section-1 {
+  position: absolute;
+  top: 13px;
+  left: 85px;
+  -webkit-transform:rotate(18deg);
+}
+
+div.board div.section-18 {
+  position: absolute;
+  top: 52px;
+  left: 161px;
+  -webkit-transform:rotate(36deg);
+}
+
+div.board div.section-4 {
+  position: absolute;
+  top: 112px;
+  left: 221px;
+  -webkit-transform:rotate(54deg);
+}
+
+div.board div.section-13 {
+  position: absolute;
+  top: 189px;
+  left: 259px;
+  -webkit-transform:rotate(72deg);
+}
+
+div.board div.section-6 {
+  position: absolute;
+  top: 273px;
+  left: 272px;
+  -webkit-transform:rotate(90deg);
+}
+
+div.board div.section-10 {
+  position: absolute;
+  top: 357px;
+  left: 259px;
+  -webkit-transform:rotate(108deg);
+}
+
+div.board div.section-15 {
+  position: absolute;
+  top: 433px;
+  left: 220px;
+  -webkit-transform:rotate(126deg);
+}
+
+div.board div.section-2 {
+  position: absolute;
+  top: 493px;
+  left: 159px;
+  -webkit-transform:rotate(144deg);
+}
+
+div.board div.section-17 {
+  position: absolute;
+  top: 531px;
+  left: 84px;
+  -webkit-transform:rotate(162deg);
+}
+
+div.board div.section-3 {
+  position: absolute;
+  top: 544px;
+  left: 0px;
+  -webkit-transform:rotate(180deg);
+}
+
+div.board div.section-19 {
+  position: absolute;
+  top: 531px;
+  left: -84px;
+  -webkit-transform:rotate(198deg);
+}
+
+div.board div.section-7 {
+  position: absolute;
+  top: 493px;
+  left: -159px;
+  -webkit-transform:rotate(216deg);
+}
+
+div.board div.section-16 {
+  position: absolute;
+  top: 433px;
+  left: -220px;
+  -webkit-transform:rotate(234deg);
+}
+
+div.board div.section-8{
+  position: absolute;
+  top: 357px;
+  left: -259px;
+  -webkit-transform:rotate(252deg);
+}
+
+div.board div.section-11 {
+  position: absolute;
+  top: 273px;
+  left: -272px;
+  -webkit-transform:rotate(270deg);
+}
+
+div.board div.section-14 {
+  position: absolute;
+  top: 189px;
+  left: -259px;
+  -webkit-transform:rotate(288deg);
+}
+
+div.board div.section-9 {
+  position: absolute;
+  top: 112px;
+  left: -221px;
+  -webkit-transform:rotate(306deg);
+}
+
+div.board div.section-12 {
+  position: absolute;
+  top: 52px;
+  left: -161px;
+  -webkit-transform:rotate(324deg);
+}
+
+div.board div.section-5 {
+  position: absolute;
+  top: 13px;
+  left: -85px;
+  -webkit-transform:rotate(342deg);
+}
+
