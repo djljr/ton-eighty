@@ -10,6 +10,23 @@ div.board {
   position: relative;
 }
 
+button.dark.small {
+  background-color: red;
+}
+
+button.dark.big {
+  background-color: black;
+  color: white;
+}
+
+button.light.small {
+  background-color: green;
+}
+
+button.light.big {
+  background-color: #FFFFF2;
+}
+
 div.board div.section-20 {
   position:absolute;
 }
